@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="gmk2vcxproj|Win32">
+      <Configuration>gmk2vcxproj</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>ActiveObject</ProjectName>
+    <ProjectGuid>{E24DA809-2D8C-4833-898B-2EF36ED283E6}</ProjectGuid>
+    <RootNamespace>ActiveObject</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='gmk2vcxproj|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='gmk2vcxproj|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='gmk2vcxproj|Win32'">
+    <Link>
+      <AdditionalDependencies>ws2_32.lib user32.lib advapi32.lib winmm.lib netapi32.lib mpr.lib ../../../../PLF/Libs/LicenseAPI/lib/win32vc10/release/libLicense.lib ../../../../PLF/Libs/LicenseAPI/libHW/win32vc10/release/libLicenseHW.lib ../../../../PLF/ExternLibs/Wibu/win32vc10/release/WkWin32.lib /NODEFAULTLIB:LIBCMT ../../../../PLF/Libs/LicenseAPI/libALM/win32vc10/release/libALM.lib ../../../../PLF/ExternLibs/Qt5/win32vc10/release/lib/Qt5CoreWCCIL.lib ../../../../PLF/ExternLibs/Qt5/win32vc10/release/lib/Qt5XmlWCCIL.lib ../../../../PLF/ExternLibs/ALM/AppModLib/win32/rel/glob/lib/almapplibx_vs_09.00.21.lib libWCCILbasics.lib ../../../../PLF/ExternLibs/Qt5/win32vc10/release/lib/Qt5CoreWCCIL.lib</AdditionalDependencies>
+      <OutputFile>../../../../HMI/bin/win32vc10/release/ActiveObject.exe</OutputFile>
+      <ImportLibrary>
+      </ImportLibrary>
+    </Link>
+    <Bscmake>
+      <OutputFile>../../../../HMI/bin/win32vc10/release/ActiveObject.exe.bsc</OutputFile>
+    </Bscmake>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../HMI/system/incl;../../../../HMI/system/incl;.;../../../../PLF/Libs/Basics/Trace;../../../../PLF/ExternLibs/Qt5/include;../../../../PLF/ExternLibs/Qt5/include/QtCore;../../../../PLF/ExternLibs/Qt5/include/QtGui;../../../../PLF/ExternLibs/Qt5/include/QtXml;../../../../PLF/Libs/Basics/BCM;../../../../PLF/Libs/Basics/Core;../../../../PLF/Libs/Basics/NoPosix;../../../../PLF/Libs/Basics/Concurrent;../../../../PLF/Libs/Basics/DpBasics;../../../../PLF/Libs/Basics/DpBasics/win32vc10/ofiles_release;../../../../PLF/Libs/Basics/Variables;../../../../PLF/Libs/Basics/Utilities;../../../../PLF/Libs/Basics/RDF;../../../../PLF/Libs/Basics/RdfFramework/framework;../../../../PLF/Libs/Basics/RdfFramework/generated;../../../../PLF/Libs/Basics/Component</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WIN32;Z_PREFIX;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NODEF__RPC_H__;WINVER=0x0500;IS_MSWIN__;_BOOL_T_DEFINED;FUNCPROTO;PVSS_VER_40;PVSS_VERS=400000;PVI_VERSION_Z=000;PVSS_VERS_BUILD=000;PVSS_VERS_DLL=\"400000.000\";PVSS_PLATFORM=\"win32vc10\";SIE_VERS=15,00,00,00,00,00,00,01;PVSS_FD_SETSIZE=8192;QT_NO_DEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_DLL;QT_NAMESPACE=WCCIL;</PreprocessorDefinitions>
+      <ForcedIncludeFiles>../../../../HMI/system/incl/win32.h</ForcedIncludeFiles>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ActivationQueue.cpp" />
+    <ClCompile Include="Main.cxx" />
+    <ClCompile Include="PrintObject.cpp" />
+    <ClCompile Include="Proxy.cpp" />
+    <ClCompile Include="Scheduler.cpp" />
+    <ClCompile Include="Servant.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActivationQueue.h" />
+    <ClInclude Include="PrintInterface.h" />
+    <ClInclude Include="PrintObject.h" />
+    <ClInclude Include="Proxy.h" />
+    <ClInclude Include="Scheduler.h" />
+    <ClInclude Include="Servant.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

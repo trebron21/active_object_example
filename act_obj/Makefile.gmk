@@ -1,0 +1,26 @@
+SRCROOT := ../../../..
+
+include $(SRCROOT)/HMI/gmk/common.gmk
+
+INCL_FILES=$(OFILES_INCL_FILE)
+-include $(INCL_FILES)
+
+INCLOPTS += $(BASICS_INCL) \
+
+OTHER_CFLAGS +=  
+OTHER_CXXFLAGS += 
+
+OTHER_OFILES += 
+OTHER_LIBS += $(MATHLIB) $(LICENSE_LIB) $(LICENSE_ALL_LIBS) \
+             $(BASICS_LIB) 
+
+TARGET = ActiveObject$(E)
+
+LIB_TARGET = $(NO_TARGET)
+RELINK_TARGET = $(NO_TARGET)
+
+LINK_TARGET = $(TARGET)
+
+SUBDIRS =
+
+include $(MAKE_SUPPORT_DIR)/general.gmk
