@@ -1,3 +1,5 @@
+// This library uses a specific trace tool
+
 // ----------------------------
 // Multithreading workshop
 // Producer - Consumer pattern
